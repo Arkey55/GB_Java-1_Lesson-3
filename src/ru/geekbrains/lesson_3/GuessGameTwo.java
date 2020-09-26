@@ -53,7 +53,7 @@ class GuessGameTwo {
     }
     private static void createSharp(String guessedWord, String userWord){
         String[] sharp = {"#","#","#","#","#","#","#","#","#","#","#","#","#","#","#"};
-        for (int i = 0; i < userWord.length(); i++) {
+        for (int i = 0; i < guessedWord.length(); i++) {
             if (guessedWord.charAt(i) == userWord.charAt(i)) {
                 sharp[i] = String.valueOf(userWord.charAt(i));
             }
@@ -61,6 +61,7 @@ class GuessGameTwo {
         for (int i = 0; i < sharp.length; i++) {
             System.out.print(sharp[i]);
         }
+
         System.out.println("");
         checkUserWord();
     }
